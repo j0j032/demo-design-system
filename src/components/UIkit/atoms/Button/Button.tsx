@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Button.module.scss";
+import styles from "./button.module.scss";
 import { Icon } from "../Icon/Icon";
 
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
