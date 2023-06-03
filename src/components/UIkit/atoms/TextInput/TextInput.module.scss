@@ -1,0 +1,64 @@
+@import "../../../../styles/mixins.scss";
+
+.wrapper {
+  @include flexColumn(flex-start, flex-start, 0);
+  width: 100%;
+}
+
+.label {
+  margin-left: 4px;
+  font-weight: 400;
+  padding-bottom: 0.8rem;
+  > span {
+    color: var(--Error);
+  }
+}
+
+.textArea {
+  resize: none;
+
+  &::placeholder {
+    font-weight: 400;
+  }
+}
+
+.input,
+.select,
+.textArea {
+  width: 100%;
+  transition: background-color 0.3s ease;
+  border: transparent;
+  box-shadow: 0 0 0 1px var(--Text-tertiary);
+  padding: 12px;
+  border-radius: 5px;
+
+  &:hover {
+    box-shadow: 0 0 0 2px var(--Text-tertiary);
+  }
+
+  &::placeholder {
+    color: #b8b8b8;
+    font-style: italic;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--Primary);
+    outline: none;
+    border-color: transparent;
+  }
+}
+
+.errorMsg {
+  height: fit-content;
+  margin-top: 0.2rem;
+  margin-bottom: 0.4rem;
+  padding-left: 0.4rem;
+  width: 100%;
+  color: var(--input-error-msg);
+  text-align: right;
+}
+
+.noError {
+  height: 1.8rem;
+  margin-top: 0.2rem;
+}

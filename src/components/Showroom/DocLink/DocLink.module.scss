@@ -1,0 +1,22 @@
+.container {
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: rgb(107, 116, 141);
+  padding: 0 8px 8px 0;
+  border-bottom: 1px solid rgb(107, 116, 141);
+  > p {
+    padding: 2px 6px;
+  }
+  &:hover {
+    &::after {
+      content: "Open Storybook";
+      font-weight: 700;
+      color: #fff;
+      background-color: #ff4785;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+  }
+}
