@@ -35,7 +35,7 @@ main {
 }
 
 .content {
-  padding: 24px 24px 0 24px;
+  padding: 24px 40px 0 40px;
   flex-grow: 1;
   height: 100dvh;
   overflow-y: scroll;
@@ -43,4 +43,11 @@ main {
 
 a {
   text-decoration: none;
+  &.active {
+    color: var(--Primary);
+    &:hover {
+      color: var(--Primary);
+      cursor: default;
+    }
+  }
 }

@@ -1,55 +1,27 @@
-export const mains = [
+export const navigationLinks = [
   {
-    icon: "",
-    label: "home",
+    label: "Foundations",
     path: "/",
+    icon: "architecture",
   },
   {
-    icon: "",
-    label: "demo",
-    path: "/demo",
-  },
-];
-
-export const atoms = [
-  {
-    icon: "",
-    label: "buttons",
-    path: "/buttons",
+    label: "Atoms",
+    path: "/atoms",
+    icon: "grain",
   },
   {
-    icon: "",
-    label: "inputs",
-    path: "/inputs",
+    label: "Molecules",
+    path: "/molecules",
+    icon: "workspaces",
   },
   {
-    icon: "",
-    label: "typography",
-    path: "/typography",
+    label: "Organisms",
+    path: "/organisms",
+    icon: "brightness_1",
   },
   {
-    icon: "",
-    label: "colors",
-    path: "/colors",
-  },
-  {
-    icon: "",
-    label: "spacing",
-    path: "/spacing",
-  },
-  {
-    icon: "",
-    label: "breakpoints",
-    path: "/breakpoints",
-  },
-  {
-    icon: "",
-    label: "shadows",
-    path: "/shadows",
-  },
-  {
-    icon: "",
-    label: "icons",
-    path: "/icons",
+    label: "Templates",
+    path: "/templates",
+    icon: "description",
   },
 ];
