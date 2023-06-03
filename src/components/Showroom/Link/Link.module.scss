@@ -1,0 +1,16 @@
+.link {
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: var(--Text);
+  &:hover {
+    color: var(--Text-secondary);
+  }
+}
+.link_container {
+  display: flex;
+  padding: 12px;
+  width: 182px;
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: center;
+}
