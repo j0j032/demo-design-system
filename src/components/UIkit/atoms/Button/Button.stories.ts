@@ -1,44 +1,81 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import Button from "./Button";
 
-import { Button } from "./Button";
-
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
   title: "Atoms/Button",
-  component: Button,
   tags: ["autodocs"],
+  component: Button,
   argTypes: {
-    backgroundColor: { control: "color" },
+    label: { control: "text" },
+    category: {
+      control: { type: "select", options: ["primary", "primary-B", "secondary", "secondary-B", "neutral"] },
+    },
+    rounded: { control: "boolean" },
+    size: {
+      control: { type: "select", options: ["small", "medium", "large"] },
+    },
+    iconName: { control: "text" },
+    iconPosition: {
+      control: { type: "select", options: ["left", "right"] },
+    },
+    fullWidth: { control: "boolean" },
+    disabled: { control: "boolean" },
+  },
+  parameters: {
+    docs: {
+      description: {
+        component: "This is a customizable button component. You can choose the label, category, size, rounded edges, icon, icon position, full width, and disabled state.",
+      },
+    },
   },
 } satisfies Meta<typeof Button>;
 
 export default meta;
+
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: "Button",
+    label: "Primary Button",
+    category: "primary",
+    rounded: false,
+    size: "medium",
+    fullWidth: false,
+    disabled: false,
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: "Button",
+    label: "Secondary Button",
+    category: "secondary",
+    rounded: false,
+    size: "medium",
+    fullWidth: false,
+    disabled: false,
   },
 };
 
-export const Large: Story = {
+export const Rounded: Story = {
   args: {
+    label: "Rounded Button",
+    category: "neutral",
+    rounded: true,
     size: "large",
-    label: "Button",
+    fullWidth: false,
+    disabled: false,
   },
 };
 
-export const Small: Story = {
+export const WithIcon: Story = {
   args: {
-    size: "small",
-    label: "Button",
+    label: "Button With Icon",
+    category: "primary",
+    iconName: "star", // replace 'star' with the name of one of your icons
+    iconPosition: "left",
+    rounded: false,
+    size: "medium",
+    fullWidth: false,
+    disabled: false,
   },
 };

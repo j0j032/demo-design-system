@@ -8,3 +8,15 @@
     font-weight: 800;
   }
 }
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.row {
+  gap: 24px 56px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,79 @@
+@import "../../../../styles/colors.scss";
+
+.button {
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  &.right {
+    flex-direction: row-reverse;
+  }
+  &.disabled {
+    background-color: rgb(193, 193, 193);
+    color: rgb(154, 154, 154);
+    box-shadow: unset;
+    cursor: default;
+    &:hover {
+      box-shadow: unset;
+    }
+  }
+}
+
+.neutral {
+  background-color: var(--White);
+  box-shadow: 0 0 0 2px var(--Text-tertiary);
+  &:hover {
+    box-shadow: 0 0 0 2px var(--Text-secondary);
+  }
+}
+
+.primary {
+  background-color: var(--Primary);
+  color: var(--White);
+  &:hover {
+    background-color: var(--Primary-light);
+  }
+}
+
+.primary-B {
+  box-shadow: 0 0 0 2px var(--Primary);
+  color: var(--Primary);
+  &:hover {
+    box-shadow: 0 0 8px 2px var(--Primary);
+  }
+}
+
+.secondary {
+  background-color: var(--Secondary);
+  color: var(--White);
+  &:hover {
+    background-color: var(--Secondary-light);
+  }
+}
+
+.secondary-B {
+  box-shadow: 0 0 0 2px var(--Secondary);
+  color: var(--Secondary);
+  &:hover {
+    box-shadow: 0 0 8px 2px var(--Secondary);
+  }
+}
+
+.small {
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.medium {
+  padding: 8px 16px;
+}
+
+.large {
+  padding: 12px 24px;
+  font-size: 18px;
+}
