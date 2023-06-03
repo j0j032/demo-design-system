@@ -1,36 +1,32 @@
-import "./button.css";
+import React from "react";
+import styles from "./button.module.scss";
+import { Icon } from "../Icon/Icon";
 
-interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: "small" | "medium" | "large";
-  /**
-   * Button contents
-   */
+type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
-}
+  category?: "primary" | "primary-B" | "secondary" | "secondary-B" | "neutral";
+  rounded?: boolean;
+  size?: "small" | "medium" | "large";
+  iconName?: string;
+  iconPosition?: "left" | "right";
+  fullWidth?: boolean;
+  disabled?: boolean;
+};
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({ primary = false, size = "medium", backgroundColor, label, ...props }: ButtonProps) => {
-  const mode = primary ? "storybook-button--primary" : "storybook-button--secondary";
+const Button = ({ label, size = "medium", fullWidth = false, category = "neutral", iconName, iconPosition = "left", rounded = false, disabled = false, ...buttonProps }: ButtonProps) => {
   return (
-    <button type="button" className={["storybook-button", `storybook-button--${size}`, mode].join(" ")} style={{ backgroundColor }} {...props}>
+    <button
+      {...buttonProps}
+      style={{
+        width: fullWidth ? "100%" : "auto",
+        borderRadius: rounded ? "50px" : "6px",
+      }}
+      className={`${[styles.button, styles[size], styles[category], styles[iconPosition], disabled && styles.disabled].join(" ")} `}
+    >
+      {iconName && <Icon icon={iconName} size={size} />}
       {label}
     </button>
   );
 };
+
+export default Button;
