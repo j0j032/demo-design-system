@@ -1,5 +1,5 @@
 import { Icon } from "../../UIkit/atoms/Icon/Icon";
-import styles from "./docLink.module.scss";
+import styles from "./DocLink.module.scss";
 
 type DocLinkProps = {
   url: string;
