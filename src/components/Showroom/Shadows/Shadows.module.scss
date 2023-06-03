@@ -1,0 +1,27 @@
+.shadows_section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.shadow_container {
+  height: 240px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  > p {
+    font-weight: 700;
+  }
+}
+
+.shadow_box {
+  background-color: var(--White);
+  width: 100%;
+  height: 80%;
+  border-radius: 8px;
+}
