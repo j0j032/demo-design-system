@@ -13,7 +13,15 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.2",
+    "sass": "^1.62.1",
+    "material-icons": "^1.13.1",
+    "usehooks-ts": "^2.9.1",
+    "@hookform/error-message": "^2.0.1",
+    "react-hook-form": "^7.42.1",
+    "react-select": "^5.7.0",
+    "zod": "^3.20.2"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.18",
