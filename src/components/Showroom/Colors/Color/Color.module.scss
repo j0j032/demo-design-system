@@ -1,0 +1,25 @@
+.card {
+  width: 180px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 0 0 2px #1111110e;
+  overflow: hidden;
+}
+
+.color {
+  height: 50%;
+}
+
+.description {
+  background-color: var(--White);
+  height: 50%;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  > p {
+    color: var(--Text-secondary);
+  }
+}

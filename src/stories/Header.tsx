@@ -1,4 +1,4 @@
-import { Button } from "./Button";
+import { Button } from "../components/UIkit/atoms/Button/Button";
 import "./header.css";
 
 type User = {

@@ -1,0 +1,46 @@
+@import "colors.scss";
+
+*,
+::before,
+:after {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 1rem;
+}
+
+body {
+  background-color: var(--UI-neutral);
+  color: var(--Text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: "Mulish", sans-serif;
+}
+
+div,
+p,
+span,
+a {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+}
+
+.content {
+  padding: 24px 24px 0 24px;
+  flex-grow: 1;
+  height: 100dvh;
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+}

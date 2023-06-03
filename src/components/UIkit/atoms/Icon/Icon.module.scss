@@ -1,0 +1,21 @@
+.icon {
+  color: var(--text-color);
+}
+.clickable {
+  cursor: pointer;
+  &:hover {
+    color: var(--primary);
+  }
+}
+
+.small {
+  font-size: 1.6rem !important;
+}
+
+.medium {
+  font-size: 1.8rem !important;
+}
+
+.large {
+  font-size: 2.4rem !important;
+}

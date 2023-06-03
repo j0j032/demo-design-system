@@ -1,0 +1,16 @@
+.container {
+  background-color: var(--White);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 8px;
+  > h2 {
+    font-size: 24px;
+  }
+  > p {
+    font-size: 14px;
+    color: var(--Text-secondary);
+  }
+}
