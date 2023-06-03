@@ -1,0 +1,11 @@
+.container {
+  width: 300px;
+  border: 1px dashed rgb(201, 201, 203);
+  height: auto;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 12px 12px 12px;
+}
