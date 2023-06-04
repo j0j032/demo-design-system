@@ -12,7 +12,7 @@ const Sidebar = () => {
     <aside className={styles.container}>
       <div className={styles.top_container}>
         <Logo withLabel />
-        <p className={styles.subtitle}>Design System</p>
+        <p className={styles.subtitle}>Lighter Design System</p>
         <div className={styles.separator}></div>
         <Warn />
         <Separator direction="horizontal" customColor="var(--Text-tertiary)" />
