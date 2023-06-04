@@ -1,13 +1,15 @@
 import DocLink from "../components/Showroom/DocLink/DocLink";
 import DropdownPresentationWrapper from "../components/Showroom/DropdownPresentationWrapper/DropdownPresentationWrapper";
+import InputPresentationWrapper from "../components/Showroom/InputPresentationWrapper/InputPresentationWrapper";
 import PageHeading from "../components/Showroom/PageHeading/PageHeading";
 import SectionWrapper from "../components/Showroom/SectionWrapper/SectionWrapper";
 import Dropdown from "../components/UIkit/mollecules/Dropdown/Dropdown";
+import Toast from "../components/UIkit/mollecules/Toast/Toast";
 
 const Molecules = () => {
   return (
     <div>
-      <PageHeading label="Molecular Elements" description="Dropdown | Tooltip | Notification | Drag & Drop" />
+      <PageHeading label="Molecular Elements" description="Dropdown | Toast " />
       <SectionWrapper title="Dropdowns" precise="⚡️ Fully Customizable drop down" docs={<DocLink url="https://demo-design-system.vercel.app/?path=/docs/molecules-dropdown--docs" />}>
         <DropdownPresentationWrapper title="Default">
           <Dropdown title="Dropdown 1">
@@ -39,9 +41,19 @@ const Molecules = () => {
           </Dropdown>
         </DropdownPresentationWrapper>
       </SectionWrapper>
-
-      <SectionWrapper title="Tooltips" precise="⚡️ Wrap your components inside to display tooltip on hover">
-        <p>tooltip</p>
+      <SectionWrapper title="Toasts" precise="⚡️ To display notifications" direction="row" docs={<DocLink url="https://demo-design-system.vercel.app/?path=/docs/molecules-toast--docs" />}>
+        <InputPresentationWrapper title="Info">
+          <Toast category="info" text="This is an info toast" />
+        </InputPresentationWrapper>
+        <InputPresentationWrapper title="warning">
+          <Toast category="warning" text="This is a warning toast" />
+        </InputPresentationWrapper>
+        <InputPresentationWrapper title="error">
+          <Toast category="error" text="This is an error toast" />
+        </InputPresentationWrapper>
+        <InputPresentationWrapper title="success">
+          <Toast category="success" text="This is a success toast" />
+        </InputPresentationWrapper>
       </SectionWrapper>
     </div>
   );

@@ -7,11 +7,12 @@ import SectionWrapper from "../components/Showroom/SectionWrapper/SectionWrapper
 import Button from "../components/UIkit/atoms/Button/Button";
 import { Icon } from "../components/UIkit/atoms/Icon/Icon";
 import { TextInput } from "../components/UIkit/atoms/TextInput/TextInput";
+import Tooltip from "../components/UIkit/atoms/Tooltip/Tooltip";
 
 const Atoms = () => {
   return (
     <>
-      <PageHeading label="Atomic Elements" description="Buttons | Icons | Inputs " />
+      <PageHeading label="Atomic Elements" description="Buttons | Icons | Inputs | Tooltip " />
       <SectionWrapper
         title="Buttons"
         direction="row"
@@ -83,6 +84,15 @@ const Atoms = () => {
         <InputPresentationWrapper title="No Label">
           <TextInput inputName="email" showPlaceholder={true} label={false} specifyLabel="Email" type="text" />
         </InputPresentationWrapper>
+      </SectionWrapper>
+      <SectionWrapper
+        title="Tooltip"
+        precise="⚡️ Wrap your components inside to display tooltip on hover"
+        docs={<DocLink url="https://demo-design-system.vercel.app/?path=/docs/atoms-tooltip--docs" />}
+      >
+        <Tooltip text="👋 I am a tooltip ! I provide more information about the element you hovered !!!">
+          <div style={{ backgroundColor: "#fff", fontSize: "18px", padding: "40px", width: "fit-content", borderRadius: "4px" }}>💁‍♂️ Hover me to see tooltip</div>
+        </Tooltip>
       </SectionWrapper>
     </>
   );

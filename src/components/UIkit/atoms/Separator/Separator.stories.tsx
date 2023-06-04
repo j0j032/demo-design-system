@@ -9,7 +9,8 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {
     direction: {
-      control: { type: "select", options: ["horizontal", "vertical"] },
+      options: ["horizontal", "vertical"],
+      control: { type: "radio" },
     },
     customColor: { control: "color" },
     customMargin: { control: "text" },
@@ -21,6 +22,13 @@ const meta = {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <div style={{ height: "100px", width: "300px", display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof Separator>;
 
 export default meta;
