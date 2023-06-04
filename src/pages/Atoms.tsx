@@ -19,7 +19,7 @@ const Atoms = () => {
       <SectionWrapper
         title="Buttons"
         direction="row"
-        docs={<DocLink url="https://demo-design-system.vercel.app/?path=/docs/atoms-button--docs" />}
+        docs={<DocLink url="https://demo-design-system-carrefour-docs.vercel.app//?path=/docs/atoms-button--docs" />}
         precise="⚡️ Powerfull buttons with different states and sizes "
       >
         <ButtonsSection heading="Primary ">
@@ -53,7 +53,7 @@ const Atoms = () => {
       <SectionWrapper
         title="Icons"
         direction="row"
-        docs={<DocLink url="https://demo-design-system.vercel.app/?path=/docs/atoms-icon--docs" />}
+        docs={<DocLink url="https://demo-design-system-carrefour-docs.vercel.app/?path=/docs/atoms-icon--docs" />}
         precise="💡 Icons names are provided from google material icons Outlined, you can find them here: https://fonts.google.com/icons"
       >
         <IconPresentationWrapper title="Small">
@@ -75,8 +75,8 @@ const Atoms = () => {
       <SectionWrapper
         title="Inputs"
         direction="row"
-        docs={<DocLink url="https://demo-design-system.vercel.app/?path=/docs/atoms-textinput--docs" />}
-        precise="💡 Here you can experiment hover & focus, to check error/success state, let's meet in forms in organisms"
+        docs={<DocLink url="https://demo-design-system-carrefour-docs.vercel.app/?path=/docs/atoms-textinput--docs" />}
+        precise="💡 Here you can experiment hover & focus, to check error/success state, form states will be testable in form (templates)"
       >
         <InputPresentationWrapper title="Default">
           <TextInput inputName="email" showPlaceholder={true} specifyLabel="Email" type="text" />
@@ -91,13 +91,13 @@ const Atoms = () => {
       <SectionWrapper
         title="Tooltip"
         precise="⚡️ Wrap your components inside to display tooltip on hover"
-        docs={<DocLink url="https://demo-design-system.vercel.app/?path=/docs/atoms-tooltip--docs" />}
+        docs={<DocLink url="https://demo-design-system-carrefour-docs.vercel.app/?path=/docs/atoms-tooltip--docs" />}
       >
         <Tooltip text="👋 I am a tooltip ! I provide more information about the element you hovered !!!">
           <div style={{ backgroundColor: "#fff", fontSize: "18px", padding: "40px", width: "fit-content", borderRadius: "4px" }}>💁‍♂️ Hover me to see tooltip</div>
         </Tooltip>
       </SectionWrapper>
-      <SectionWrapper title="Logos" precise="⚡️ To display Carrefour logo" docs={<DocLink url="https://demo-design-system.vercel.app/?path=/docs/atoms-logo--docs" />} direction="row">
+      <SectionWrapper title="Logos" precise="⚡️ To display Carrefour logo" docs={<DocLink url="https://demo-design-system-carrefour-docs.vercel.app/?path=/docs/atoms-logo--docs" />} direction="row">
         <IconPresentationWrapper title="small">
           <Logo size="small" />
         </IconPresentationWrapper>
@@ -111,7 +111,12 @@ const Atoms = () => {
           <Logo withLabel={true} />
         </IconPresentationWrapper>
       </SectionWrapper>
-      <SectionWrapper title="Social Icons" precise="⚡️ To display social icons" docs={<DocLink url="https://demo-design-system.vercel.app/?path=/docs/atoms-socialicon--docs" />} direction="row">
+      <SectionWrapper
+        title="Social Icons"
+        precise="⚡️ To display social icons"
+        docs={<DocLink url="https://demo-design-system-carrefour-docs.vercel.app/?path=/docs/atoms-socialicon--docs" />}
+        direction="row"
+      >
         <IconPresentationWrapper title="Github">
           <SocialIcon iconSrc={socialIcons[1].src} href={socialIcons[1].href} name={socialIcons[1].name} />
         </IconPresentationWrapper>

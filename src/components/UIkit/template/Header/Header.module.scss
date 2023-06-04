@@ -1,0 +1,26 @@
+.container {
+  padding: 16px 32px 14px 32px;
+  background-color: var(--White);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 0 16px;
+    > div > img {
+      margin-right: 8px;
+    }
+  }
+}
+.icon_container {
+  gap: 8px;
+  > span {
+    &:hover {
+      color: var(--Primary);
+    }
+  }
+}
