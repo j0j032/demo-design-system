@@ -6,13 +6,16 @@ import PageHeading from "../components/Showroom/PageHeading/PageHeading";
 import SectionWrapper from "../components/Showroom/SectionWrapper/SectionWrapper";
 import Button from "../components/UIkit/atoms/Button/Button";
 import { Icon } from "../components/UIkit/atoms/Icon/Icon";
+import Logo from "../components/UIkit/atoms/Logo/Logo";
+import SocialIcon from "../components/UIkit/atoms/SocialIcon/SocialIcon";
 import { TextInput } from "../components/UIkit/atoms/TextInput/TextInput";
 import Tooltip from "../components/UIkit/atoms/Tooltip/Tooltip";
+import { socialIcons } from "../constants/socialicons";
 
 const Atoms = () => {
   return (
     <>
-      <PageHeading label="Atomic Elements" description="Buttons | Icons | Inputs | Tooltip " />
+      <PageHeading label="Atomic Elements" description="Buttons | Icons | Inputs | Tooltip | Logos | Social Icons " />
       <SectionWrapper
         title="Buttons"
         direction="row"
@@ -93,6 +96,28 @@ const Atoms = () => {
         <Tooltip text="👋 I am a tooltip ! I provide more information about the element you hovered !!!">
           <div style={{ backgroundColor: "#fff", fontSize: "18px", padding: "40px", width: "fit-content", borderRadius: "4px" }}>💁‍♂️ Hover me to see tooltip</div>
         </Tooltip>
+      </SectionWrapper>
+      <SectionWrapper title="Logos" precise="⚡️ To display Carrefour logo" docs={<DocLink url="https://demo-design-system.vercel.app/?path=/docs/atoms-logo--docs" />} direction="row">
+        <IconPresentationWrapper title="small">
+          <Logo size="small" />
+        </IconPresentationWrapper>
+        <IconPresentationWrapper title="medium">
+          <Logo size="medium" />
+        </IconPresentationWrapper>
+        <IconPresentationWrapper title="large">
+          <Logo size="large" />
+        </IconPresentationWrapper>
+        <IconPresentationWrapper title="with label">
+          <Logo withLabel={true} />
+        </IconPresentationWrapper>
+      </SectionWrapper>
+      <SectionWrapper title="Social Icons" precise="⚡️ To display social icons" docs={<DocLink url="https://demo-design-system.vercel.app/?path=/docs/atoms-socialicon--docs" />} direction="row">
+        <IconPresentationWrapper title="Github">
+          <SocialIcon iconSrc={socialIcons[1].src} href={socialIcons[1].href} name={socialIcons[1].name} />
+        </IconPresentationWrapper>
+        <IconPresentationWrapper title="LinkedIn">
+          <SocialIcon iconSrc={socialIcons[2].src} href={socialIcons[2].href} name={socialIcons[2].name} />
+        </IconPresentationWrapper>
       </SectionWrapper>
     </>
   );
