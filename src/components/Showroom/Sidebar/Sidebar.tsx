@@ -5,6 +5,7 @@ import { navigationLinks } from "../../../constants/navigation";
 import Link from "../Link/Link";
 import { socialIcons } from "../../../constants/socialicons";
 import SocialIcon from "../../UIkit/atoms/SocialIcon/SocialIcon";
+import { Separator } from "../../UIkit/atoms/Separator/Separator";
 
 const Sidebar = () => {
   return (
@@ -14,7 +15,7 @@ const Sidebar = () => {
         <p className={styles.subtitle}>Design System</p>
         <div className={styles.separator}></div>
         <Warn />
-        <div className={styles.separator}></div>
+        <Separator direction="horizontal" customColor="var(--Text-tertiary)" />
         <div className={styles.navigation}>
           {navigationLinks.map((link, index) => {
             return <Link key={index} to={link.path} label={link.label} icon={link.icon} />;
@@ -22,7 +23,7 @@ const Sidebar = () => {
         </div>
       </div>
       <div className={styles.footer}>
-        <div className={styles.separator}></div>
+        <Separator direction="horizontal" customColor="var(--Text-tertiary)" />
         <div className={styles.social_container}>
           {socialIcons.map((icon, index) => {
             return <SocialIcon key={index} href={icon.href} name={icon.name} iconSrc={icon.src} />;

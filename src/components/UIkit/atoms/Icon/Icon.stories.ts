@@ -1,5 +1,3 @@
-/* eslint-disable react-refresh/only-export-components */
-
 import type { Meta, StoryObj } from "@storybook/react";
 import { Icon } from "./Icon";
 

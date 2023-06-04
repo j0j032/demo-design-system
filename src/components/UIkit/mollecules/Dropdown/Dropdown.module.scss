@@ -1,0 +1,29 @@
+@import "src/styles/mixins.scss";
+
+.dropdown {
+  width: 100%;
+  overflow: hidden;
+
+  .dropdownHeading {
+    @include flexRow(space-between, flex-start, 24px);
+    padding: 12px 24px 8px 24px;
+    cursor: pointer;
+    width: 100%;
+    > div {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+.dropdownContent {
+  padding: 12px 24px 12px 24px;
+  display: block;
+}
+
+.dropdownContentHidden {
+  display: none;
+}
