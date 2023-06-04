@@ -14,7 +14,7 @@ const Organisms = () => {
       <SectionWrapper
         title="Cards"
         precise="⚡️ To display product information in shopping lists, search results, and recommendations."
-        docs={<DocLink url="https://demo-design-system.vercel.app/?path=/docs/organisms-productcard--docs" />}
+        docs={<DocLink url="https://demo-design-system-carrefour-docs.vercel.app/?path=/docs/organisms-productcard--docs" />}
       >
         <CardGalleryWrapper title="ProductCard">
           {products.map((product) => (
