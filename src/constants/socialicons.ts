@@ -4,7 +4,7 @@ import storybook from "../assets/storybook.svg";
 
 export const socialIcons = [
   {
-    href: "https://demo-design-system.vercel.app/",
+    href: "https://demo-design-system-carrefour-docs.vercel.app/",
     name: "storybook",
     src: storybook,
   },
